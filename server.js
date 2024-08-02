@@ -11,3 +11,8 @@ const users =[
     }
 
 ]
+
+const filterUsers = (users, searchTerm) => {
+    const lowerCaseSearchTerm = searchTerm.toLowerCase();
+    return users.filter(user => user.name.toLowerCase().includes(lowerCaseSearchTerm));
+}
